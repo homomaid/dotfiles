@@ -53,8 +53,9 @@ set fillchars+=vert:\
 
 try
   colorscheme base16-ocean
-  highlight Normal ctermbg=none
-  highlight CursorLineNr term=bold cterm=NONE ctermfg=7 ctermbg=8
+  highlight Normal ctermbg=NONE
+  highlight LineNr ctermbg=NONE
+  highlight CursorLineNr term=bold cterm=NONE ctermfg=208 ctermbg=NONE
   highlight clear CursorLine
 catch
   colorscheme desert

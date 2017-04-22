@@ -12,10 +12,6 @@ inoremap `` ``<Left>
 " ノーマルモードでの : と ; の置換
 nnoremap ; :
 
-" 削除
-inoremap <C-h> <BS>
-inoremap <C-d> <DEL>
-
 " カーソル移動
 nnoremap j gj
 nnoremap k gk
@@ -25,8 +21,10 @@ vnoremap j gj
 vnoremap k gk
 vnoremap gj j
 vnoremap gk k
+inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
+inoremap <C-d> <Right>
 
 " インクリメント/デクリメント
 nnoremap + <C-a>

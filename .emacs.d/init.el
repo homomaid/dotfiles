@@ -129,21 +129,12 @@
 ;; @ Packages
 (package-initialize)
 
+;; @ Cask
 (require 'cask)
 (cask-initialize)
 
+;; @ magic-filetype
 (defalias 'major-mode-of 'magic-filetype-major-mode-of)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(nyan-bar-length 16)
- '(package-selected-packages
-   (quote
-    (smooth-scrolling volatile-highlights git-commit projectile-rails helm-rails haml-mode web-beautify osx-dictionary osx-clipboard java-snippets company-web yatex rust-mode helm-rb company-inf-ruby helm-ag smartparens moe-theme helm-c-yasnippet company auto-save-buffers-enhanced))))
-(nyan-mode t)
 
 ;; @ multimarkdown
 (setq markdown-command "multimarkdown")

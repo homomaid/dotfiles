@@ -24,7 +24,7 @@ vnoremap gk k
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
-inoremap <C-d> <Right>
+inoremap <C-l> <Right>
 
 " インクリメント/デクリメント
 nnoremap + <C-a>

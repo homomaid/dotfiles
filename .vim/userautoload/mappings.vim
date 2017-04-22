@@ -39,18 +39,6 @@ vnoremap v $h
 nnoremap q <Nop>
 nnoremap <F1> <Nop>
 inoremap <F1> <Nop>
-nnoremap <Left> <Nop>
-nnoremap <Down> <Nop>
-nnoremap <Up> <Nop>
-nnoremap <Right> <Nop>
-vnoremap <Left> <Nop>
-vnoremap <Down> <Nop>
-vnoremap <Up> <Nop>
-vnoremap <Right> <Nop>
-inoremap <Left> <Nop>
-inoremap <Down> <Nop>
-inoremap <Up> <Nop>
-inoremap <Right> <Nop>
 
 " 貼り付け
 set pastetoggle=<C-y>

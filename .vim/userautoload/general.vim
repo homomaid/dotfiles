@@ -52,10 +52,10 @@ set listchars=tab:▸\
 set fillchars+=vert:\ 
 
 try
-  colorscheme hybrid
-  " highlight Normal ctermbg=none
-  " highlight highlight CursorLineNr term=bold cterm=NONE ctermfg=7 ctermbg=8
-  " highlight clear CursorLine
+  colorscheme base16-ocean
+  highlight Normal ctermbg=none
+  highlight CursorLineNr term=bold cterm=NONE ctermfg=7 ctermbg=8
+  highlight clear CursorLine
 catch
   colorscheme desert
 endtry

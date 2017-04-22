@@ -23,16 +23,13 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'w0ng/vim-hybrid'
-
-[[plugins]]
 repo = 'felixjung/vim-base16-lightline'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
   let g:lightline = {
-  \   'colorscheme': 'hybrid',
+  \   'colorscheme': 'base16-ocean',
   \   'active': {
   \     'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], [ 'anzu' ] ],
   \     'right': [ [ 'lineinfo' ], [ 'fileformat', 'fileencoding', 'filetype' ] ],

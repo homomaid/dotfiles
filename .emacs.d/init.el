@@ -93,17 +93,44 @@
 ;;ウィンドウを左右に分割したとき用の設定
 (setq-default truncate-partial-width-windows t)
 
-;; multimarkdown
-(setq markdown-command "multimarkdown")
+;; window-resizer
+;; http://d.hatena.ne.jp/mooz/20100119/p1
+(defun window-resizer ()
+  "Control window size and position."
+  (interactive)
+  (let ((window-obj (selected-window))
+        (current-width (window-width))
+        (current-height (window-height))
+        (dx (if (= (nth 0 (window-edges)) 0) 1
+              -1))
+        (dy (if (= (nth 1 (window-edges)) 0) 1
+              -1))
+        c)
+    (catch 'end-flag
+      (while t
+        (message "size[%dx%d]"
+                 (window-width) (window-height))
+        (setq c (read-char))
+        (cond ((= c ?l)
+               (enlarge-window-horizontally dx))
+              ((= c ?h)
+               (shrink-window-horizontally dx))
+              ((= c ?j)
+               (enlarge-window dy))
+              ((= c ?k)
+               (shrink-window dy))
+              ;; otherwise
+              (t
+               (message "Quit")
+               (throw 'end-flag t)))))))
+
+(global-set-key "\C-c\C-r" 'window-resizer)
 
 ;; @ Packages
-(when (or (require 'cask "~/.cask/cask.el" t)
-          (require 'cask nil t))
-  (cask-initialize))
 (package-initialize)
 
-(require 'use-package)
-(pallet-mode t)
+(require 'cask)
+(cask-initialize)
 
 (defalias 'major-mode-of 'magic-filetype-major-mode-of)
 
@@ -117,6 +144,9 @@
    (quote
     (smooth-scrolling volatile-highlights git-commit projectile-rails helm-rails haml-mode web-beautify osx-dictionary osx-clipboard java-snippets company-web yatex rust-mode helm-rb company-inf-ruby helm-ag smartparens moe-theme helm-c-yasnippet company auto-save-buffers-enhanced))))
 (nyan-mode t)
+
+;; @ multimarkdown
+(setq markdown-command "multimarkdown")
 
 ;; @ moe-theme
 (require 'moe-theme)
@@ -254,9 +284,23 @@
 ;;
 ;; RefTeX with YaTeX
 ;;
-;(add-hook 'yatex-mode-hook 'turn-on-reftex)
+(add-hook 'yatex-mode-hook 'turn-on-reftex)
 (add-hook 'yatex-mode-hook
           '(lambda ()
              (reftex-mode 1)
              (define-key reftex-mode-map (concat YaTeX-prefix ">") 'YaTeX-comment-region)
              (define-key reftex-mode-map (concat YaTeX-prefix "<") 'YaTeX-uncomment-region)))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (yatex web-mode web-beautify volatile-highlights use-package smooth-scrolling smex smartparens rust-mode quickrun projectile-rails prodigy popwin php-mode pallet osx-dictionary osx-clipboard nyan-mode neotree multiple-cursors moe-theme markdown-mode magit java-snippets imenu-list idle-highlight-mode htmlize helm-rb helm-rails helm-c-yasnippet helm-ag haml-mode flymake-ruby flymake-coffee flycheck-cask expand-region exec-path-from-shell drag-stuff csharp-mode company-web company-inf-ruby coffee-mode bison-mode auto-save-buffers-enhanced))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

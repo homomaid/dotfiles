@@ -1,0 +1,46 @@
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['typescript']
+
+[[plugins]]
+repo = 'Quramy/tsuquyomi'
+on_ft = ['typescript']
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'cakebaker/scss-syntax.vim'
+on_ft = ['css', 'scss']
+
+[[plugins]]
+repo = 'nicklasos/vim-jsx-riot'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'StanAngeloff/php.vim'
+on_ft = ['php']
+hook_add = '''
+  let g:PHP_vintage_case_default_indent = 1
+'''
+
+[[plugins]]
+repo = 'shawncplus/phpcomplete.vim'
+on_ft = ['php']
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'vim-scripts/jQuery'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_ft = ['html', 'php', 'css', 'scss']
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']

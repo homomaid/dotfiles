@@ -1,0 +1,227 @@
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  let g:NERDTreeMinimalUI = 1
+  let g:NERDTreeWinSize = 25
+'''
+
+[[plugins]]
+repo = 'jistr/vim-nerdtree-tabs'
+hook_add = '''
+  if winwidth(0) > 80 || has('nvim')
+    let g:nerdtree_tabs_open_on_console_startup = 1
+  endif
+'''
+
+[[plugins]]
+repo = 'chitoku-k/nerdtree-chmod'
+
+[[plugins]]
+repo = 'chriskempson/base16-vim'
+hook_add = '''
+  let g:base16colorspace = 256
+'''
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+[[plugins]]
+repo = 'felixjung/vim-base16-lightline'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  let g:lightline = {
+  \   'colorscheme': 'hybrid',
+  \   'active': {
+  \     'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], [ 'anzu' ] ],
+  \     'right': [ [ 'lineinfo' ], [ 'fileformat', 'fileencoding', 'filetype' ] ],
+  \   },
+  \   'inactive': {
+  \     'left': [ [ 'filename' ] ],
+  \     'right': [],
+  \   },
+  \   'tabline': {
+  \     'left': [ [ 'tabs' ] ],
+  \     'right': [],
+  \   },
+  \   'component_function': {
+  \     'mode': 'LightLineMode',
+  \     'fugitive': 'LightLineFugitive',
+  \     'filename': 'LightLineFilename',
+  \     'lineinfo': 'LightLineLineinfo',
+  \     'fileformat': 'LightLineFileformat',
+  \     'filetype': 'LightLineFiletype',
+  \     'fileencoding': 'LightLineFileencoding',
+  \     'anzu': 'anzu#search_status',
+  \   },
+  \ }
+'''
+
+# Either $TERM_PROGRAM or $VTE_VERSION is used for detection
+[[plugins]]
+repo = 'jszakmeister/vim-togglecursor'
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = 't9md/vim-textmanip'
+hook_add = '''
+  xmap <C-h> <Plug>(textmanip-move-left)
+  xmap <C-j> <Plug>(textmanip-move-down)
+  xmap <C-k> <Plug>(textmanip-move-up)
+  xmap <C-l> <Plug>(textmanip-move-right)
+
+  if has('nvim')
+    xmap <BS> <Plug>(textmanip-move-left)
+  endif
+'''
+
+[[plugins]]
+repo = 'gko/vim-coloresque'
+
+[[plugins]]
+repo = 'sudo.vim'
+
+[[plugins]]
+repo = 'simeji/winresizer'
+hook_add = '''
+  let g:winresizer_vert_resize = 1
+  let g:winresizer_horiz_resize = 1
+'''
+
+[[plugins]]
+repo = "rhysd/clever-f.vim"
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+hook_add = '''
+  let g:context_filetype#filetypes = {
+  \   'html': [
+  \     {
+  \       'start': '<script\%( [^>]*\)\?>',
+  \       'end': '</script>', 'filetype': 'javascript',
+  \     },
+  \     {
+  \       'start': '<style type="text/scss"\%( [^>]*\)\?>',
+  \       'end': '</style>', 'filetype': 'scss',
+  \     },
+  \     {
+  \       'start': '<style\%( [^>]*\)\?>',
+  \       'end': '</style>', 'filetype': 'css',
+  \     },
+  \   ]
+  \ }
+'''
+
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+
+[[plugins]]
+repo = 'lambdalisue/vim-gista'
+hook_add = '''
+  let g:gista#github_user = 'homomaid'
+'''
+
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add='''
+  if has('nvim') && has('python3')
+    let g:deoplete#enable_at_startup = 1
+  endif
+'''
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+repo = 'christoomey/vim-tmux-navigator'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'haya14busa/incsearch.vim'
+hook_add = '''
+  let g:incsearch#magic = '\v'
+  map / <Plug>(incsearch-forward)
+  map ? <Plug>(incsearch-backward)
+  map g/ <Plug>(incsearch-stay)
+'''
+
+[[plugins]]
+repo = 'osyo-manga/vim-anzu'
+hook_add = '''
+  let g:anzu_enable_CursorMoved_AnzuUpdateSearchStatus = 1
+  let g:anzu_status_format = "%/ (%i/%l)"
+  nmap <silent> <Esc><Esc> <Plug>(anzu-clear-search-status):nohlsearch<CR>
+  nmap n <Plug>(anzu-n)zz
+  nmap N <Plug>(anzu-N)zz
+  nmap * <Plug>(anzu-star)<Plug>(asterisk-z*)zz
+  nmap # <Plug>(anzu-sharp)<Plug>(asterisk-z#)zz
+'''
+
+[[plugins]]
+repo = 'haya14busa/vim-asterisk'
+hook_add = '''
+  map g* <Plug>(asterisk-gz*)
+  map g# <Plug>(asterisk-gz#)
+'''
+
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'rhysd/vim-operator-surround'
+hook_add = '''
+  let g:operator#surround#blocks = {
+  \   '-': [
+  \     {
+  \       'block': ['(', ')'],
+  \       'motionwise': ['char', 'line', 'block'],
+  \       'keys': ['b'],
+  \     },
+  \     {
+  \       'block': ["'", "'"],
+  \       'motionwise': ['char', 'line', 'block'],
+  \       'keys': ['q'],
+  \     },
+  \     {
+  \       'block': ['"', '"'],
+  \       'motionwise': ['char', 'line', 'block'],
+  \       'keys': ['Q'],
+  \     },
+  \   ]
+  \ }
+  nmap <silent>ys <Plug>(operator-surround-append)
+  nmap <silent>ds <Plug>(operator-surround-delete)
+  nmap <silent>cs <Plug>(operator-surround-replace)
+'''
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'kana/vim-textobj-jabraces'
+
+[[plugins]]
+repo = 'kana/vim-textobj-line'
+
+[[plugins]]
+repo = 'kana/vim-textobj-entire'
+
+[[plugins]]
+repo = 'sgur/vim-textobj-parameter'
+
+[[plugins]]
+repo = 'Julian/vim-textobj-variable-segment'
+
+[[plugins]]
+repo = 'whatyouhide/vim-textobj-xmlattr'

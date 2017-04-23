@@ -21,6 +21,7 @@
 (depends-on "flycheck-cask")
 (depends-on "flymake-coffee")
 (depends-on "flymake-ruby")
+(depends-on "guru-mode")
 (depends-on "git-commit")
 (depends-on "haml-mode")
 (depends-on "helm")

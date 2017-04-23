@@ -5,6 +5,9 @@
 ;; @ load-theme
 (load-theme 'base16-ocean t)
 
+;; @ guru-mode
+(guru-global-mode)
+
 ;; @ magic-filetype
 (defalias 'major-mode-of 'magic-filetype-major-mode-of)
 

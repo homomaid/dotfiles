@@ -23,12 +23,6 @@ set ___fish_git_prompt_char_upstream_equal ''
 status --is-interactive; and source (rbenv init -|psub)
 status --is-interactive; and source (pyenv init -|psub)
 
-# emacs
-if test $USER != "root"
-   function emacs; emacsclient -nw -a "" $argv 2> /dev/null; end
-   function ekill; emacsclient -e "(kill-emacs)"; end
-end
-
 # chitoku
 function chitoku; ruby ~/Development/chitoku/chitoku.rb; end
 function h; history | peco; end

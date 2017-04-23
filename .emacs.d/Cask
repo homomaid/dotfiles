@@ -1,6 +1,7 @@
 (source melpa)
 
 (depends-on "auto-save-buffers-enhanced")
+(depends-on "base16-theme")
 (depends-on "bind-key")
 (depends-on "bison-mode")
 (depends-on "cask")

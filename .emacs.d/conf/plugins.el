@@ -1,9 +1,6 @@
 ;; @ Cask
-(require 'cask)
+(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
-
-;; @ load-theme
-(load-theme 'base16-ocean t)
 
 ;; @ guru-mode
 (guru-global-mode)

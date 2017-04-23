@@ -45,13 +45,14 @@ set laststatus=2
 set ambiwidth=double
 set nowrap
 
+" True Color
 " set termguicolors
 
 " 不可視文字の指定
-set listchars=tab:▸\ 
+set listchars=tab:▸\
 
 " 区切り文字の指定
-set fillchars+=vert:\ 
+set fillchars+=vert:\
 
 try
   colorscheme base16-ocean

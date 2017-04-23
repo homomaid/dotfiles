@@ -1,12 +1,9 @@
-;; @ Packages
-(package-initialize)
-
 ;; @ Cask
 (require 'cask)
 (cask-initialize)
 
 ;; @ load-theme
-(load-theme 'base16-ocean)
+(load-theme 'base16-ocean t)
 
 ;; @ magic-filetype
 (defalias 'major-mode-of 'magic-filetype-major-mode-of)

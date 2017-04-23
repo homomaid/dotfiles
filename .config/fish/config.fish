@@ -19,6 +19,11 @@ set __fish_git_prompt_char_upstream_ahead '↑'
 set __fish_git_prompt_char_upstream_behind '↓'
 set ___fish_git_prompt_char_upstream_equal ''
 
+# Base16 Shell
+if status --is-interactive
+    eval sh $HOME/.config/base16-shell/scripts/base16-ocean.sh
+end
+
 # env
 status --is-interactive; and source (rbenv init -|psub)
 status --is-interactive; and source (pyenv init -|psub)

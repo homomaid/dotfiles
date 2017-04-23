@@ -1,4 +1,6 @@
+(source gnu)
 (source melpa)
+(source marmalade)
 
 (depends-on "auto-save-buffers-enhanced")
 (depends-on "base16-theme")

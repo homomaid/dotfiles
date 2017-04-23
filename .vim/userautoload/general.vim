@@ -45,6 +45,8 @@ set laststatus=2
 set ambiwidth=double
 set nowrap
 
+" set termguicolors
+
 " 不可視文字の指定
 set listchars=tab:▸\ 
 

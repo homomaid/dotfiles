@@ -29,7 +29,7 @@ repo = 'felixjung/vim-base16-lightline'
 repo = 'itchyny/lightline.vim'
 hook_add = '''
   let g:lightline = {
-  \   'colorscheme': 'base16-ocean',
+  \   'colorscheme': 'base16_ocean',
   \   'active': {
   \     'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], [ 'anzu' ] ],
   \     'right': [ [ 'lineinfo' ], [ 'fileformat', 'fileencoding', 'filetype' ] ],

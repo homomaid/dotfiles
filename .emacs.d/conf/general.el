@@ -7,6 +7,7 @@
 
 ;; Disable make backup file
 (setq make-backup-files nil)
+
 ;; Disable auto save
 (setq auto-save-default nil)
 
@@ -85,5 +86,10 @@
 
 ;;通常のウィンドウ用の設定
 (setq-default truncate-lines t)
+
 ;;ウィンドウを左右に分割したとき用の設定
 (setq-default truncate-partial-width-windows t)
+
+;; 行番号表示
+(global-linum-mode 1)
+(setq linum-format "%4d ")

@@ -24,6 +24,12 @@ if status --is-interactive
     eval sh $HOME/.config/base16-shell/scripts/base16-ocean.sh
 end
 
+# emacs
+if test $USER != "root"
+   function emacs; emacsclient -nw -a "" $argv 2> /dev/null; end
+   function ekill; emacsclient -e "(kill-emacs)"; end
+end
+
 # env
 if type rbenv>/dev/null 2>&1
    status --is-interactive; and source (rbenv init -|psub)

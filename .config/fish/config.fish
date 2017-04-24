@@ -25,11 +25,10 @@ if status --is-interactive
 end
 
 # env
-# status --is-interactive; and source (rbenv init -|psub)
-# status --is-interactive; and source (pyenv init -|psub)
+if type rbenv>/dev/null 2>&1
+   status --is-interactive; and source (rbenv init -|psub)
+end
 
-# chitoku
-#function chitoku; ruby ~/Development/chitoku/chitoku.rb; end
-#function h; history | peco; end
-#function gl; git log | peco; end
-#set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+if type pyenv>/dev/null 2>&1
+   status --is-interactive; and source (pyenv init -|psub)
+end

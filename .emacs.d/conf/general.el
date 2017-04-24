@@ -38,7 +38,7 @@
 
 ;; ウィンドウ（フレーム）のサイズ設定する
 (setq default-frame-alist
-      '((width . 140) (height . 35)))
+      '((width . 120) (height . 36)))
 
 ;; マウス・スクロールを滑らかにする（Mac Emacs 専用）
 (setq mac-mouse-wheel-smooth-scroll t)

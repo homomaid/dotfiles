@@ -2,7 +2,7 @@
 " 表示
 "-------------------
 set background=dark
-set lines=30
+set lines=36
 set columns=120
 
 if has('gui_gtk2')

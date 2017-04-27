@@ -225,6 +225,3 @@ repo = 'whatyouhide/vim-textobj-xmlattr'
 
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
-
-[[plugins]]
-repo = 'vim-latex/vim-latex'

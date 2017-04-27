@@ -224,7 +224,7 @@ repo = 'Julian/vim-textobj-variable-segment'
 repo = 'whatyouhide/vim-textobj-xmlattr'
 
 [[plugins]]
-repo = 'lasticboy/vim-markdown'
+repo = 'plasticboy/vim-markdown'
 
 [[plugins]]
 repo = 'vim-latex/vim-latex'

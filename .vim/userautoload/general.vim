@@ -40,7 +40,7 @@ set scrolloff=3
 set visualbell
 set number
 set numberwidth=5
-set showtabline=2
+set showtabline=4
 set laststatus=2
 set ambiwidth=double
 set nowrap

@@ -90,3 +90,5 @@
 ;; 行番号表示
 (global-linum-mode 1)
 (setq linum-format "%4d ")
+
+(setq oauth-nonce-function 'oauth-internal-make-nonce)

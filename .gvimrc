@@ -2,8 +2,8 @@
 " 表示
 "-------------------
 set background=dark
-set lines=36
-set columns=120
+set lines=35
+set columns=165
 
 if has('gui_gtk2')
   set linespace=3

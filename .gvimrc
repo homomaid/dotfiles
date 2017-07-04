@@ -2,15 +2,15 @@
 " 表示
 "-------------------
 set background=dark
-set lines=35
-set columns=165
+set lines=47
+set columns=225
 
 if has('gui_gtk2')
   set linespace=3
   set guifont=Inconsolata\ 14
 elseif has('gui_macvim')
   set linespace=5
-  set guifont=Inconsolata:h14
+  set guifont=Inconsolata:h12
   set guifontwide=HiraginoSans-W3
 endif
 

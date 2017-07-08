@@ -11,6 +11,21 @@
 ;; @ multimarkdown
 (setq markdown-command "multimarkdown")
 
+;; @ smartparens
+(smartparens-global-mode t)
+
+;; @ yasnippet
+(setq helm-yas-space-match-any-greedy t)
+(global-set-key (kbd "C-c y") 'helm-yas-complete)
+(push '("emacs.+/snippets/" . snippet-mode) auto-mode-alist)
+(yas-global-mode 1)
+
+;; @ company
+(global-company-mode) ; 全バッファで有効にする
+(setq company-idle-delay 0) ; デフォルトは0.5
+(setq company-minimum-prefix-length 2) ; デフォルトは4
+(setq company-selection-wrap-around t) ; 候補の一番下でさらに下に行こうとすると一番上に戻る
+
 ;; @ whitespace
 ;; スペース、タブなどを可視化する
 (setq whitespace-style '(face           ; faceで可視化
@@ -71,9 +86,6 @@
         '(:eval (format my-mode-line-format
         (count-lines (point-max) (point-min))))))
 
-;; @ smartparens
-(smartparens-global-mode t)
-
 ;; @ helm
 (helm-mode 1)
 ;; C-hでバックスペースと同じように文字を削除
@@ -91,18 +103,6 @@
 (global-set-key (kbd "C-x b")   'helm-buffers-list)
 (global-set-key (kbd "M-r")     'helm-resume)
 (global-set-key (kbd "C-M-h")   'helm-apropos)
-
-;; @ yasnippet
-(setq helm-yas-space-match-any-greedy t)
-(global-set-key (kbd "C-c y") 'helm-yas-complete)
-(push '("emacs.+/snippets/" . snippet-mode) auto-mode-alist)
-(yas-global-mode 1)
-
-;; @ company
-(global-company-mode) ; 全バッファで有効にする
-(setq company-idle-delay 0) ; デフォルトは0.5
-(setq company-minimum-prefix-length 2) ; デフォルトは4
-(setq company-selection-wrap-around t) ; 候補の一番下でさらに下に行こうとすると一番上に戻る
 
 ;; @ auto-save-buffers-enhanced
 (setq auto-save-buffers-enhanced-interval 5) ; 指定のアイドル秒で保存
@@ -156,4 +156,4 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (base16-theme yatex web-mode web-beautify volatile-highlights use-package smooth-scrolling smex smartparens rust-mode quickrun projectile-rails prodigy popwin php-mode pallet osx-dictionary osx-clipboard nyan-mode neotree multiple-cursors moe-theme markdown-mode magit java-snippets imenu-list idle-highlight-mode htmlize helm-rb helm-rails helm-c-yasnippet helm-ag haml-mode flymake-ruby flymake-coffee flycheck-cask expand-region exec-path-from-shell drag-stuff csharp-mode company-web company-inf-ruby coffee-mode bison-mode auto-save-buffers-enhanced))))
+    (base16-theme yatex web-mode web-beautify volatile-highlights use-package smooth-scrolling smex smartparens rust-mode quickrun projectile-rails prodigy popwin php-mode pallet osx-dictionary osx-clipboard nyan-mode neotree multiple-cursors moe-theme markdown-vmode magit java-snippets imenu-list idle-highlight-mode htmlize helm-rb helm-rails helm-c-yasnippet helm-ag haml-mode flymake-ruby flymake-coffee flycheck-cask expand-region exec-path-from-shell drag-stuff csharp-mode company-web company-inf-ruby coffee-mode bison-mode auto-save-buffers-enhanced))))

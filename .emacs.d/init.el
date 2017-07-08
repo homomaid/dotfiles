@@ -12,7 +12,8 @@
 (package-initialize)
 
 ;; @ Cask
-(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+;; (require 'cask t)
+(require 'cask "~/.cask/cask.el" t)
 (cask-initialize)
 
 ;; @ load-theme

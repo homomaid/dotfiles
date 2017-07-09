@@ -38,3 +38,7 @@ end
 if type pyenv>/dev/null 2>&1
    status --is-interactive; and source (pyenv init -|psub)
 end
+
+if type phpenv>/dev/null 2>&1
+   status --is-interactive; and source (phpenv init -|psub)
+end

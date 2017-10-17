@@ -21,14 +21,19 @@ set ___fish_git_prompt_char_upstream_equal ''
 
 # Base16 Shell
 if status --is-interactive
-    eval sh $HOME/.config/base16-shell/scripts/base16-ocean.sh
+   eval sh $HOME/.config/base16-shell/scripts/base16-ocean.sh
 end
 
+set -x PATH /usr/local/bin $PATH
+set -x PATH /usr/local/sbin $PATH
+set -x PATH /usr/local/opt/openssl/bin $PATH
+
+
 # emacs
-if test $USER != "root"
-   function emacs; emacsclient -nw -a "" $argv 2> /dev/null; end
-   function ekill; emacsclient -e "(kill-emacs)"; end
-end
+# if test $USER != "root"
+#   function emacs; emacsclient -nw -a "" $argv 2> /dev/null; end
+#   function ekill; emacsclient -e "(kill-emacs)"; end
+# end
 
 # env
 if type rbenv>/dev/null 2>&1
@@ -37,8 +42,4 @@ end
 
 if type pyenv>/dev/null 2>&1
    status --is-interactive; and source (pyenv init -|psub)
-end
-
-if type phpenv>/dev/null 2>&1
-   status --is-interactive; and source (phpenv init -|psub)
 end

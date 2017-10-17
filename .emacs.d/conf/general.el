@@ -92,3 +92,7 @@
 (setq linum-format "%4d ")
 
 (setq oauth-nonce-function 'oauth-internal-make-nonce)
+
+(set-face-background 'vertical-border "color-19")
+(set-face-foreground 'vertical-border (face-background 'vertical-border))
+

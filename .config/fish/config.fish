@@ -27,7 +27,7 @@ end
 set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
 set -x PATH /usr/local/opt/openssl/bin $PATH
-
+set -x PATH ~/.cask/bin $PATH
 
 # emacs
 # if test $USER != "root"

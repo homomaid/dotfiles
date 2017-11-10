@@ -12,8 +12,8 @@
 (package-initialize)
 
 ;; @ Cask
-(require 'cask "/usr/local/opt/cask/cask.el" t)
-;; (require 'cask "~/.cask/cask.el" t)
+;; (require 'cask "/usr/local/opt/cask/cask.el" t)
+(require 'cask "~/.cask/cask.el" t)
 (cask-initialize)
 
 ;; @ load-theme

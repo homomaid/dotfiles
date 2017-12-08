@@ -26,7 +26,12 @@ end
 
 set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
-set -x PATH /usr/local/opt/openssl/bin $PATH
+set -x PATH ~/.cask/bin $PATH
+
+# macOS
+if test (uname) = "Darwin"
+    set -x PATH /usr/local/opt/openssl/bin $PATH
+end
 
 # emacs
 # if test $USER != "root"

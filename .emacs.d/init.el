@@ -12,8 +12,7 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 
 ;; @ Cask
-(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el" t)
-;; (require 'cask "~/.cask/cask.el" t)
+(require 'cask "~/.cask/cask.el" t)
 (cask-initialize)
 
 ;; @ load-theme

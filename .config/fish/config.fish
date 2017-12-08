@@ -28,7 +28,6 @@ set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
 set -x PATH /usr/local/opt/openssl/bin $PATH
 
-
 # emacs
 # if test $USER != "root"
 #   function emacs; emacsclient -nw -a "" $argv 2> /dev/null; end

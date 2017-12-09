@@ -34,7 +34,6 @@ if test (uname) = "Darwin"
     set -x PATH /usr/local/opt/openssl/bin $PATH
 end
 
-
 # emacs
 # if test $USER != "root"
 #   function emacs; emacsclient -nw -a "" $argv 2> /dev/null; end

@@ -10,7 +10,7 @@ if has('gui_gtk2')
   set guifont=Inconsolata\ 14
 elseif has('gui_macvim')
   set linespace=5
-  set guifont=Inconsolata:h12
+  set guifont=Inconsolata:h14
   set guifontwide=HiraginoSans-W3
 endif
 

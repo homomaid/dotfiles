@@ -27,6 +27,7 @@ end
 set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
 set -x PATH ~/.cask/bin $PATH
+set -x TERM xterm-256color
 
 # macOS
 if test (uname) = "Darwin"

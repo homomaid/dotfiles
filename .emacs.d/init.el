@@ -12,7 +12,11 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 
 ;; @ Cask
-(require 'cask "~/.cask/cask.el" t)
+(cond
+ ((equal system-type'darwin)
+  (require 'cask "/usr/local/opt/cask/cask.el"))
+ (t
+  (require 'cask "~/.cask/cask.el" t)))
 (cask-initialize)
 
 ;; @ load-theme

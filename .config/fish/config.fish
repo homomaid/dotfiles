@@ -26,6 +26,7 @@ end
 
 set -x PATH /usr/local/bin $PATH
 set -x PATH /usr/local/sbin $PATH
+set -x TERM xterm-256color
 
 # macOS
 if test (uname) = "Darwin"
@@ -33,7 +34,6 @@ if test (uname) = "Darwin"
 else
     set -x PATH ~/.cask/bin $PATH
 end
-
 
 # emacs
 # if test $USER != "root"

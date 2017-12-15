@@ -31,7 +31,7 @@ set -x TERM xterm-256color
 # macOS
 if test (uname) = "Darwin"
     set -x PATH /usr/local/opt/openssl/bin $PATH
-else
+else if test -d ~/.cask/bin
     set -x PATH ~/.cask/bin $PATH
 end
 

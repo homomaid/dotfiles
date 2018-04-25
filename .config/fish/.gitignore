@@ -1,1 +1,4 @@
 fishd.*
+functions/fisher.fish
+completions/
+conf.d/

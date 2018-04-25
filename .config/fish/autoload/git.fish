@@ -2,7 +2,6 @@
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
 set __fish_git_prompt_showupstream 'yes'
-
 set ___fish_git_prompt_color_branch ""
 set ___fish_git_prompt_color_branch_detached ""
 set ___fish_git_prompt_color_branch_detached_done ""

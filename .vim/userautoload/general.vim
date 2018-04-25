@@ -3,6 +3,7 @@
 "-------------------
 set encoding=utf-8
 set fileencodings=utf-8,euc-jp,cp932,sjis
+set hidden
 set noshowmode
 set noundofile
 set noswapfile
@@ -16,10 +17,10 @@ set softtabstop=4
 set virtualedit=block
 set cindent
 set title
+set clipboard=unnamedplus,unnamed
 
 " 行頭/行末からのカーソル移動を許可
 set whichwrap=b,s,h,l,[,],<,>
-
 " バックスペースを空白/行頭/行末で許可
 set backspace=indent,eol,start
 
@@ -27,9 +28,10 @@ set backspace=indent,eol,start
 "-------------------
 " 表示
 "-------------------
+filetype plugin indent on
 set list
 set scrolloff=3
-set visualbell
+set novisualbell
 set number
 set numberwidth=5
 set showtabline=4
@@ -37,14 +39,12 @@ set laststatus=2
 set ambiwidth=double
 set nowrap
 
-" True Color
-" set termguicolors
-
 " 不可視文字の指定
 set listchars=tab:▸\
 
 " 区切り文字の指定
 set fillchars+=vert:\
+
 
 "-------------------
 " 検索
@@ -53,6 +53,7 @@ set ignorecase
 set smartcase
 set wrapscan
 set hlsearch
+
 
 "-------------------
 " autocmd
@@ -67,6 +68,7 @@ augroup vimrc
   autocmd QuickFixCmdPost *grep* cwindow
   autocmd WinLeave,TabLeave * call anzu#clear_search_status()
 augroup END
+
 augroup CursorLine
   autocmd!
   autocmd WinEnter,BufWinEnter * setlocal cursorline

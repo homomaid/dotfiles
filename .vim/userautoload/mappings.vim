@@ -21,22 +21,27 @@ vnoremap j gj
 vnoremap k gk
 vnoremap gj j
 vnoremap gk k
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+cnoremap <C-h> <Left>
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
+cnoremap <C-l> <Right>
 
 " インクリメント/デクリメント
 nnoremap + <C-a>
 nnoremap - <C-x>
+vnoremap + g<C-a>
+vnoremap - g<C-x>
 
 " 行末まで選択
 vnoremap v $h
 
 " 無効化
-nnoremap q <Nop>
-nnoremap <F1> <Nop>
-inoremap <F1> <Nop>
+noremap <C-q> <Nop>
+noremap <F1> <Nop>
 nnoremap <Left> <Nop>
 nnoremap <Down> <Nop>
 nnoremap <Up> <Nop>
@@ -45,6 +50,10 @@ vnoremap <Left> <Nop>
 vnoremap <Down> <Nop>
 vnoremap <Up> <Nop>
 vnoremap <Right> <Nop>
+cnoremap <Left> <Nop>
+cnoremap <Down> <Nop>
+cnoremap <Up> <Nop>
+cnoremap <Right> <Nop>
 if !has('gui')
     inoremap <Left> <Nop>
     inoremap <Down> <Nop>

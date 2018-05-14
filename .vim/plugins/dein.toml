@@ -1,9 +1,5 @@
 [[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-  let g:NERDTreeMinimalUI = 1
-  let g:NERDTreeWinSize = 25
-'''
+repo = 'justinmk/vim-dirvish'
 
 [[plugins]]
 repo = 'jistr/vim-nerdtree-tabs'
@@ -79,7 +75,7 @@ hook_add = '''
 repo = 'gko/vim-coloresque'
 
 [[plugins]]
-repo = 'sudo.vim'
+repo = 'vim-scripts/sudo.vim'
 
 [[plugins]]
 repo = 'simeji/winresizer'
@@ -225,3 +221,6 @@ repo = 'whatyouhide/vim-textobj-xmlattr'
 
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
+
+[[plugins]]
+repo = 'vim-scripts/sudo.vim'

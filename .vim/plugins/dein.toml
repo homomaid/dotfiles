@@ -10,9 +10,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'chitoku-k/nerdtree-chmod'
-
-[[plugins]]
 repo = 'chriskempson/base16-vim'
 hook_add = '''
   let g:base16colorspace = 256

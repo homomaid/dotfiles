@@ -69,3 +69,5 @@ set pastetoggle=<C-y>
 if has('nvim')
   nmap <BS> <C-w>h
 endif
+
+nnoremap : ;

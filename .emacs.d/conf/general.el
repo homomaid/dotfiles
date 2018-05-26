@@ -44,7 +44,10 @@
 (setq mac-mouse-wheel-smooth-scroll t)
 
 ;; タブにスペースを使用する
-(setq-default tab-width 4 indent-tabs-mode nil)
+(setq-default
+ c-basic-offset 4
+ tab-width 4
+ indent-tabs-mode nil)
 
 ;; 改行コードを表示する
 (setq eol-mnemonic-dos "(CRLF)")

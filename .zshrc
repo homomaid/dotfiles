@@ -1,8 +1,13 @@
 export TERM=xterm-256color
 
 # alias
+
+## for ls options
 alias la='ls -al'
 alias ll='ls -l'
+## emacsclient
+alias emacs='emacsclient -nw -a "" $argv 2> /dev/null'
+alias ekill='emacsclient -e "(kill-emacs)"'
 
 # PATH
 export PATH=$PATH:/usr/local/bin

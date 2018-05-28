@@ -30,7 +30,14 @@ autoload -Uz colors
 colors
 
 _zsh_prompt() {
-    PROMPT=$'\n\x1b[38;2;255;255;255m\x1b[48;2;204;119;51m %m \x1b[48;2;136;153;85m'" $(basename $(get_pwd)) "$'\x1b[48;2;126;128;233m $ \x1b[0m '
+    local white=$'\x1b[38;2;255;255;255m'
+    local hostname=$'\x1b[48;2;204;119;51m %m '
+    local dirname=$'\x1b[48;2;136;153;85m'" $(basename $(get_pwd)) "
+    local dollar=$'\x1b[48;2;126;128;233m $ '
+    local reset=$'\x1b[0m '
+
+    PS1=$'\n'$white$hostname$dirname$dollar$reset
+
     zle && zle reset-prompt
 }
 

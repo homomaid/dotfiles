@@ -14,6 +14,7 @@
 (depends-on "company-web")
 (depends-on "csharp-mode")
 (depends-on "dash")
+(depends-on "ddskk")
 (depends-on "drag-stuff")
 (depends-on "exec-path-from-shell")
 (depends-on "expand-region")

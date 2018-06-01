@@ -5,6 +5,9 @@
 ;; @ guru-mode
 (guru-global-mode)
 
+;; @ddskk
+(global-set-key (kbd "C-x C-j") 'skk-mode)
+
 ;; @ magic-filetype
 (defalias 'major-mode-of 'magic-filetype-major-mode-of)
 

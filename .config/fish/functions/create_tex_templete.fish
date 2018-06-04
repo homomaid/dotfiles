@@ -4,4 +4,6 @@ function create_tex_templete
     rm -rf .git README.md
     git init
     gitignore LaTeX macOS Linux > .gitignore
+
+    cd ..
 end

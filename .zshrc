@@ -45,3 +45,4 @@ _zsh_prompt() {
 zle -N zle-line-init _zsh_prompt
 zle -N zle-line-finish _zsh_prompt
 
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}

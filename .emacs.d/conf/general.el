@@ -1,6 +1,7 @@
 (global-set-key "\C-h" 'delete-backward-char)
 (global-set-key "\C-x\C-g" 'goto-line)
 (global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ct" 'toggle-truncate-lines)
 (global-set-key [f8] 'neotree-toggle)
 (global-set-key [f11] 'package-list-packages)
 (global-set-key [f12] 'eval-buffer)

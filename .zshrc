@@ -37,7 +37,7 @@ _zsh_prompt() {
     local dollar=$'\x1b[48;2;126;128;233m $ '
     local reset=$'\x1b[0m '
 
-    PS1=$'\n'$white$hostname$dirname$dollar$reset
+    PS1=$white$hostname$dirname$dollar$reset
 
     zle && zle reset-prompt
 }

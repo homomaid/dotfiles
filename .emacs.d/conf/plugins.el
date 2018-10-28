@@ -148,12 +148,3 @@
              (reftex-mode 1)
              (define-key reftex-mode-map (concat YaTeX-prefix ">") 'YaTeX-comment-region)
              (define-key reftex-mode-map (concat YaTeX-prefix "<") 'YaTeX-uncomment-region)))
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (base16-theme yatex web-mode web-beautify volatile-highlights use-package smooth-scrolling smex smartparens rust-mode quickrun projectile-rails prodigy popwin php-mode pallet osx-dictionary osx-clipboard nyan-mode neotree multiple-cursors moe-theme markdown-vmode magit java-snippets imenu-list idle-highlight-mode htmlize helm-rb helm-rails helm-c-yasnippet helm-ag haml-mode flymake-ruby flymake-coffee flycheck-cask expand-region exec-path-from-shell drag-stuff csharp-mode company-web company-inf-ruby coffee-mode bison-mode auto-save-buffers-enhanced))))

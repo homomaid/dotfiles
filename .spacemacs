@@ -320,8 +320,9 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
-  (bind-key "\C-h" 'delete-backward-char)
-  (bind-key "\C-x\C-g" 'goto-line)
+  (bind-key "C-h" 'delete-backward-char)
+  (bind-key "C-x C-g" 'goto-line)
+  (bind-key "C-x C-j" 'skk-mode)
 
   ;; 改行コードを表示する
   (setq eol-mnemonic-dos "(CRLF)")

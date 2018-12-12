@@ -1,16 +1,42 @@
-function fish_prompt
-  set tilde ~
-  set -l dir (string replace -r '^'"$tilde"'($|/)' '~$1' $PWD)
+function fish_prompt --description 'Write out the prompt'
+	#Save the return status of the previous command
+    set stat $status
 
-  set_color fff
-  echo
-  echo -n (set_color -b c73) (hostname -s) ""
-  echo -n (set_color -b 895) (basename $dir) ""
-  echo -n (set_color -b 458)(__fish_git_prompt " ")
-  if test $USER = "root"
-    echo -n (set_color -b b36) "#" ""
-  else
-    echo -n (set_color -b 7e80e9) "\$" ""
-  end
-  echo -n (set_color -b normal)" "
+    if not set -q __fish_prompt_normal
+        set -g __fish_prompt_normal (set_color normal)
+    end
+
+    if not set -q __fish_color_blue
+        set -g __fish_color_blue (set_color -o blue)
+    end
+
+    #Set the color for the status depending on the value
+    set __fish_color_status (set_color -o green)
+    if test $stat -gt 0
+        set __fish_color_status (set_color -o red)
+    end
+
+    switch "$USER"
+
+        case root toor
+
+            if not set -q __fish_prompt_cwd
+                if set -q fish_color_cwd_root
+                    set -g __fish_prompt_cwd (set_color $fish_color_cwd_root)
+                else
+                    set -g __fish_prompt_cwd (set_color $fish_color_cwd)
+                end
+            end
+
+            printf '%s@%s %s%s%s# ' $USER (prompt_hostname) "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal"
+
+        case '*'
+
+            if not set -q __fish_prompt_cwd
+                set -g __fish_prompt_cwd (set_color $fish_color_cwd)
+            end
+
+            printf '[%s] %s%s@%s %s%s %s(%s)%s \f\r> ' (date "+%H:%M:%S") "$__fish_color_blue" $USER (prompt_hostname) "$__fish_prompt_cwd" "$PWD" "$__fish_color_status" "$stat" "$__fish_prompt_normal"
+
+    end
 end

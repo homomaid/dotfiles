@@ -8,7 +8,4 @@ rm installer.sh
 curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
 ## Install Spacemacs
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-
-## Install base16-shell
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+git clone https://github.com/syl21bnr/spacemacs ~/.emacs.d

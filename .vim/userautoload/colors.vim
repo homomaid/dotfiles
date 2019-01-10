@@ -1,2 +1,2 @@
 syntax on
-colorscheme default
+colorscheme desert

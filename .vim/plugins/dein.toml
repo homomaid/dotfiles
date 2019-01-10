@@ -2,27 +2,10 @@
 repo = 'justinmk/vim-dirvish'
 
 [[plugins]]
-repo = 'jistr/vim-nerdtree-tabs'
-hook_add = '''
-  if winwidth(0) > 80 || has('nvim')
-    let g:nerdtree_tabs_open_on_console_startup = 1
-  endif
-'''
-
-[[plugins]]
-repo = 'chriskempson/base16-vim'
-hook_add = '''
-  let g:base16colorspace = 256
-'''
-
-[[plugins]]
-repo = 'felixjung/vim-base16-lightline'
-
-[[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
   let g:lightline = {
-  \   'colorscheme': 'base16_ocean',
+  \   'colorscheme': 'one',
   \   'active': {
   \     'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], [ 'anzu' ] ],
   \     'right': [ [ 'lineinfo' ], [ 'fileformat', 'fileencoding', 'filetype' ] ],
@@ -70,9 +53,6 @@ hook_add = '''
 
 [[plugins]]
 repo = 'gko/vim-coloresque'
-
-[[plugins]]
-repo = 'vim-scripts/sudo.vim'
 
 [[plugins]]
 repo = 'simeji/winresizer'
